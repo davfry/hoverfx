@@ -66,10 +66,23 @@ $btn-pill
   @extends $btn-generic
   @extends $btn-pill
 
+@keyframes pop
+    0%
+      -webkit-transform scale(1.1)
+    50%
+      -webkit-transform scale(0.9)
+    100%
+      -webkit-transform scale(1)
+
+@keyframes bounce
+    50%
+      -webkit-transform scale(1.1)
+
+
 .fill-back
   &:hover
     border-color hsl(200, 100%, 50%)
-    background hsla(200, 100%, 50%, 0.15)
+    background hsla(200, 100%, 50%, 0.1)
     color hsl(200, 100%, 50%)
 
 .fill-bord
@@ -84,3 +97,17 @@ $btn-pill
 .shrink
   &:hover
     transform scale(.9)
+
+.pop
+  &:hover
+    -webkit-animation-name pop
+    -webkit-animation-duration .5s
+    -webkit-animation-timing-function linear
+    -webkit-animation-iteration-count 1
+
+.bounce
+  &:hover
+    -webkit-animation-name bounce
+    -webkit-animation-duration 1s
+    -webkit-animation-timing-function linear
+    -webkit-animation-iteration-count infinite
