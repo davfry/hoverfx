@@ -38,96 +38,49 @@ $btn-generic
   cursor pointer
   background none
 
-.btn-thin-fill
-  @extends $btn-generic
+$btn-thin
   border 1px solid
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
+  transition all 0.2s ease-in-out
+
+$btn-thick
+  border 2px solid
+  font-weight bold
+  transition all 0.2s ease-in-out
+
+$btn-pill
+  border 2px solid
+  border-radius 30px
+  font-weight bold
+  transition all 0.2s ease-in-out
+
+.btn-thin
+  @extends $btn-generic
+  @extends $btn-thin
+
+.btn-thick
+  @extends $btn-generic
+  @extends $btn-thick
+
+
+.btn-pill
+  @extends $btn-generic
+  @extends $btn-pill
+
+.fill-back
   &:hover
     border-color hsl(200, 100%, 50%)
     background hsla(200, 100%, 50%, 0.15)
     color hsl(200, 100%, 50%)
 
-.btn-thick-fill
-  @extends $btn-generic
-  border 2px solid
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
+.fill-bord
   &:hover
     border-color hsl(200, 100%, 50%)
     color hsl(200, 100%, 50%)
 
-.btn-thick-pill
-  @extends $btn-generic
-  border 2px solid
-  border-radius 30px
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
-  &:hover
-    border-color hsl(200, 100%, 50%)
-    color hsl(200, 100%, 50%)
-
-.btn-thin-grow
-  @extends $btn-generic
-  border 1px solid
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
+.grow
   &:hover
     transform scale(1.1)
 
-.btn-thick-grow
-  @extends $btn-generic
-  border 2px solid
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
-  &:hover
-    transform scale(1.1)
-
-.btn-thick-pill-grow
-  @extends $btn-generic
-  border 2px solid
-  border-radius 30px
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
-  &:hover
-    transform scale(1.1)
-
-.btn-thin-shrink
-  @extends $btn-generic
-  border 1px solid
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
-  &:hover
-    transform scale(.9)
-
-.btn-thick-shrink
-  @extends $btn-generic
-  border 2px solid
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
-  &:hover
-    transform scale(.9)
-
-.btn-thick-pill-shrink
-  @extends $btn-generic
-  border 2px solid
-  border-radius 30px
-  font-weight bold
-  transition background 0.3s ease-in-out
-  transition border 0.3s ease-in-out
-  transition color 0.3s ease-in-out
+.shrink
   &:hover
     transform scale(.9)
