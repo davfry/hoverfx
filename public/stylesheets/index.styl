@@ -12,6 +12,7 @@ body
   position absolute
   margin 0
   text-align center
+  background hsl(0, 0%, 96%)
   > div
     display flex
     flex-direction column
@@ -21,9 +22,46 @@ h1
   font-weight 100
   margin-top 0
 
+h3
+  padding 1.5rem 0
+
 a
   padding 10px
+  text-transform none
+  text-decoration none
+  color hsl(200, 100%, 50%)
 
+header
+  position fixed
+  top 0
+  width 100%
+  text-align left
+  left 5vw
+  background hsl(0, 0%, 96%)
+  padding 1.5rem 0
+.hero
+  width 60vw
+  margin auto
+  padding 6rem 0
+
+$bg-generic
+  width 60vw
+  margin auto
+
+.bg-1
+  @extends $bg-generic
+  background #E0E0E0
+  color #04251D
+
+.bg-2
+  @extends $bg-generic
+  background #BDBDBD
+
+.bg-3
+  @extends $bg-generic
+  background #9E9E9E
+.box
+  padding 3rem 0
 $btn-generic
   min-width 100px
   max-width 200px
@@ -68,8 +106,12 @@ $btn-pill
 
 @keyframes pop
     0%
+      -webkit-transform scale(1)
+    25%
       -webkit-transform scale(1.1)
     50%
+      -webkit-transform scale(1)
+    75%
       -webkit-transform scale(0.9)
     100%
       -webkit-transform scale(1)
@@ -82,7 +124,7 @@ $btn-pill
 .fill-back
   &:hover
     border-color hsl(200, 100%, 50%)
-    background hsla(200, 100%, 50%, 0.1)
+    background rgba(34, 174, 196, 0.1)
     color hsl(200, 100%, 50%)
 
 .fill-bord
@@ -108,6 +150,6 @@ $btn-pill
 .bounce
   &:hover
     -webkit-animation-name bounce
-    -webkit-animation-duration 1s
+    -webkit-animation-duration .75s
     -webkit-animation-timing-function linear
     -webkit-animation-iteration-count infinite
