@@ -1,6 +1,6 @@
 # hoverfx
 
-stylus hover effects for buttons
+CSS hover effects for buttons.
 
 ## License
 
